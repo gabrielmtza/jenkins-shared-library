@@ -4,7 +4,7 @@ def call(){
 		stages {
 			stage('print') {
 				steps {
-					println 'test webhook'
+					println 'test shared library'
 				}
 			}
 			stage('java version') {
