@@ -5,6 +5,9 @@ def call(){
 			stage('print') {
 				steps {
 					println 'test shared library'
+					def testScript = libraryResource 'test.sh'
+                        		writeFile file: 'test.sh', text: testScript
+					sh "./test.sh"
 				}
 			}
 			stage('java version') {
