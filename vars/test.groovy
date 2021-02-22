@@ -6,7 +6,7 @@ def call(){
         steps{
           script{
             println 'test shared libary'
-            def testScript = libraryResource 'test'bat'
+            def testScript = libraryResource 'test.bat'
             writeFile file: 'test.bat', text: testScript
             bat 'test.bat'
           }
